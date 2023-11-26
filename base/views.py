@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 from usuarios.models import Usuario
 from productos.models import Producto
+from ventas.models import Venta
+from compras.models import Compra
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 @login_required

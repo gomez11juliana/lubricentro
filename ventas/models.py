@@ -5,8 +5,8 @@ from productos.models import Producto
 # Create your models here.
 
 class Venta(models.Model):
-    usuarios = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    productos = models.ManyToManyField(Producto, through='DetalleVenta')
+    usuario= models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    producto= models.ManyToManyField(Producto, through='DetalleVenta')
     fechaVenta=models.DateField(max_length=12, verbose_name="Fecha Venta")
     totalVenta=models.DecimalField(max_digits=10, decimal_places=2)
     class Estado(models.TextChoices):
